@@ -23,7 +23,7 @@ connection.queryAsync = query => new Promise((resolve, reject) => {
 const mchat = require('./route/mchat-route')(connection);
 const app = express();
 
-app.use(cors({ origin: 'https://www.stalkmaszyna.przegrywy.net/' }));
+app.use(cors({ origin: '*' }));
 app.use('/mchat', mchat);
 
 app.listen(port, () => console.log(`Listening on http://localhost:${port}`));
